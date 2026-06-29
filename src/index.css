@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-batik-bg: #FAF7EE;
+  --color-batik-surface: #FFFFFF;
+  --color-batik-surface-dark: #F0E8D5;
+  --color-batik-gold: #C9A84C;
+  --color-batik-blue: #2C4A7C;
+  --color-batik-brown: #6B3A2A;
+  --color-batik-green: #5B8A52;
+  --color-batik-dark: #2C1810;
+  --color-batik-muted: #8B7355;
+
+  --font-serif: "Lora", Georgia, serif;
+  --font-sans: "Nunito", sans-serif;
+}
+
+body {
+  background-color: #FAF7EE;
+  color: #2C1810;
+  font-family: "Nunito", sans-serif;
+  overflow-x: hidden;
+}
+
+/* Kawung motif background using radial/linear gradients */
+.kawung-pattern {
+  background-color: #FAF7EE;
+  background-image: 
+    radial-gradient(circle at 50% 50%, transparent 15%, #F0E8D5 16%, #F0E8D5 20%, transparent 21%),
+    radial-gradient(circle at 0 0, transparent 40%, rgba(201, 168, 76, 0.07) 41%, rgba(201, 168, 76, 0.07) 45%, transparent 46%),
+    radial-gradient(circle at 100% 0, transparent 40%, rgba(201, 168, 76, 0.07) 41%, rgba(201, 168, 76, 0.07) 45%, transparent 46%),
+    radial-gradient(circle at 100% 100%, transparent 40%, rgba(201, 168, 76, 0.07) 41%, rgba(201, 168, 76, 0.07) 45%, transparent 46%),
+    radial-gradient(circle at 0 100%, transparent 40%, rgba(201, 168, 76, 0.07) 41%, rgba(201, 168, 76, 0.07) 45%, transparent 46%);
+  background-size: 50px 50px;
+  background-position: 0 0, 25px 25px, 25px 25px, 25px 25px, 25px 25px;
+}
+
+/* Subtle Kawung pattern overlay or background */
+.kawung-subtle {
+  background-image: 
+    radial-gradient(circle at 50% 50%, transparent 18%, rgba(201, 168, 76, 0.1) 19%, rgba(201, 168, 76, 0.1) 22%, transparent 23%),
+    radial-gradient(circle at 0 0, transparent 42%, rgba(201, 168, 76, 0.05) 43%, rgba(201, 168, 76, 0.05) 46%, transparent 47%),
+    radial-gradient(circle at 100% 0, transparent 42%, rgba(201, 168, 76, 0.05) 43%, rgba(201, 168, 76, 0.05) 46%, transparent 47%),
+    radial-gradient(circle at 100% 100%, transparent 42%, rgba(201, 168, 76, 0.05) 43%, rgba(201, 168, 76, 0.05) 46%, transparent 47%),
+    radial-gradient(circle at 0 100%, transparent 42%, rgba(201, 168, 76, 0.05) 43%, rgba(201, 168, 76, 0.05) 46%, transparent 47%);
+  background-size: 60px 60px;
+}
+
+/* Polkadot background - hidden on mobile, visible on desktop */
+.polkadot-bg {
+  background-color: #FAF7EE;
+}
+@media (min-width: 768px) {
+  .polkadot-bg {
+    background-image: radial-gradient(#C9A84C 18%, transparent 19%), radial-gradient(#6B3A2A 18%, transparent 19%);
+    background-size: 28px 28px;
+    background-position: 0 0, 14px 14px;
+  }
+}
